@@ -3,6 +3,18 @@
 On-device speech recognition models used by the Call AI app. Model files are published as
 GitHub Release assets and verified by SHA-256 in the app.
 
+## SenseVoiceSmall-callai-ko-mix-v1 (int8, sherpa-onnx)
+
+Korean telephone-call fine-tune of SenseVoiceSmall (current model). Release tag: `mix-v1`.
+
+| File | Size (bytes) | SHA-256 |
+|---|---|---|
+| model.int8.onnx | 239,233,840 | `b8ebbec9db4eb776700ff434946a688f7aad00b564fc4b0f6235f2f5d8ad5294` |
+| tokens.txt | 315,894 | `f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc` |
+
+Evaluation (28 user-corrected phone calls, character error rate, same windowing as the app, on a Galaxy S22 Ultra):
+base SenseVoiceSmall 29.0% -> exp9 22.0% -> mix-v1 21.3%.
+
 ## SenseVoiceSmall-callai-ko-exp9 (int8, sherpa-onnx)
 
 Korean telephone-call fine-tune of SenseVoiceSmall.
